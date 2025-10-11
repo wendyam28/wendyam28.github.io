@@ -94,6 +94,20 @@
     <textarea placeholder="Your Message" rows="4" required></textarea>
     <input type="submit" value="Send Message">
   </form>
+<h2>💸 KindHeat™ Impact Calculator</h2>
+<label for="unitCount">How many units would you like to fund?</label>
+<input type="number" id="unitCount" value="1" min="1">
+<button onclick="calculateImpact()">Calculate</button>
+<p id="impactResult"></p>
 
+<script>
+function calculateImpact() {
+  const units = document.getElementById("unitCount").value;
+  const costPerUnit = 45;
+  const total = units * costPerUnit;
+  document.getElementById("impactResult").innerText =
+    `That’s $${total} to fund ${units} KindHeat™ unit(s).`;
+}
+</script>
 </body>
 </html>
